@@ -18,9 +18,9 @@ app.get('/hello/:nom', (req, res) => {
   res.send(message);
 });
 
-app.get("/Name/:nom", (req, res) => {
+app.get("/button/:nom", (req, res) => {
   const nom = req.params.nom;
-  res.send(`"<p>${nom}</p>"`);
+  res.send(nom);
 });
 
 ViteExpress.listen(app, parseInt(port), () =>
